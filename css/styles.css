@@ -57,8 +57,11 @@ button {
 .link {
   text-decoration: none;
 }
-
-/* ================ COMPONENTS ================= */
+/**
+  |================================
+             Components
+  |================================
+*/
 .logo-link {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -127,9 +130,16 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* ================ /COMPONENTS ================= */
-
-/* ================ HEADER ================== */
+/**
+  |================================
+            End Components
+  |================================
+*/
+/**
+  |================================
+              Header
+  |================================
+*/
 .header-container {
   display: flex;
   align-items: center;
@@ -193,8 +203,16 @@ button {
   color: var(--pointing-state-color);
 }
 
-/* ================ /HEADER ================== */
-/* ================ HERO IMAGE ================= */
+/**
+  |================================
+             End Header
+  |================================
+*/
+/**
+  |================================
+              Hero Image
+  |================================
+*/
 .hero {
   text-align: center;
   padding-top: 188px;
@@ -245,9 +263,16 @@ button {
   color: var(--primary-white-color);
 }
 
-/* ================ /HERO IMAGE ================= */
-
-/* ================ SKILLS SECTION  ============== */
+/**
+  |================================
+          End Hero Image
+  |================================
+*/
+/**
+  |================================
+          Skills Section
+  |================================
+*/
 .skills-list {
   margin-top: 0;
 }
@@ -266,9 +291,17 @@ button {
   margin-bottom: 8px;
   align-items: center;
 }
-/* ================ /SKILLS SECTION  ============== */
+/**
+  |================================
+         End Skills Section
+  |================================
+*/
 
-/* ================ WORK SECTION  ================ */
+/**
+  |================================
+            Work Section
+  |================================
+*/
 .work-section {
   padding-top: 0;
 }
@@ -276,9 +309,17 @@ button {
 .work-item {
   flex-basis: calc((100% - 48px) / 3);
 }
-/* ================ /WORK SECTION  =============== */
+/**
+  |================================
+          End Work Section
+  |================================
+*/
 
-/* ================ TEAM SECTION  ================ */
+/**
+  |================================
+          Team Section
+  |================================
+*/
 .team-section {
   background: var(--cloud-color);
 }
@@ -329,9 +370,17 @@ button {
 .team-soc-icon {
   fill: var(--cloud-color);
 }
-/* ================ /TEAM SECTION  =============== */
+/**
+  |================================
+          End Team Section
+  |================================
+*/
 
-/* ================ CUSTOMERS SECTION  =============== */
+/**
+  |================================
+          Customers Section
+  |================================
+*/
 .customers-list {
   display: flex;
   gap: 24px;
@@ -365,9 +414,17 @@ button {
 :focus {
   color: #404bbf;
 }
-/* ================ /CUSTOMERS SECTION  ============== */
+/**
+  |================================
+        End Customers Section
+  |================================
+*/
 
-/* ================ FOOTER ================= */
+/**
+  |================================
+              Footer
+  |================================
+*/
 .footer-text {
   color: var(--cornflower-color);
   margin-top: 16px;
@@ -423,9 +480,17 @@ button {
 .footer-soc-icon {
   fill: var(--cloud-color);
 }
-/* ================ /FOOTER ================= */
+/**
+  |================================
+                Footer
+  |================================
+*/
 
-/* ================ PORTFOLIO SECTION ================= */
+/**
+  |================================
+          Portfolio Section
+  |================================
+*/
 .filters-btn {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -494,9 +559,85 @@ button {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   display: block;
 }
+/**
+  |================================
+          End Portfolio Section
+  |================================
+*/
+/**
+  |================================
+  |         Modal Window
+  |================================
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  width: 408px;
+  min-height: 576px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-close-btn {
+  display: block;
+  margin-left: auto;
+
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid var(--cornflower-color);
+  border-radius: 50%;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--pointing-state-color);
+}
+
+.modal-close-icon {
+  fill: var(--secondary-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--primary-white-color);
+}
 
 /**
   |================================
-  | Code by Yaroslav Yarmolchuk
+  |        End Modal Window
   |================================
 */
